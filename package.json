@@ -1,0 +1,16 @@
+{
+  "name": "simple_collectible_subgraph",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ suganth-cppl/simple_collectible_subgraph",
+    "create-local": "graph create --node http://localhost:8020/ suganth-cppl/simple_collectible_subgraph",
+    "remove-local": "graph remove --node http://localhost:8020/ suganth-cppl/simple_collectible_subgraph",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 suganth-cppl/simple_collectible_subgraph"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.20.0",
+    "@graphprotocol/graph-ts": "0.20.0"
+  }
+}
