@@ -87,5 +87,23 @@ and use the following commands
   * event will bring the params and it will mapped with the schema fields 
 
 ##### after deployment of subgraph
-  * it will provide two kinds of urls, one is `http` and other is `ws` (web socket)
+  * it will provide two graphql urls, one is `http` and other is `ws` (web socket)
   * both are used for graphql queries which can be used in the dapps
+  * use this url for graphql online explorer `https://lucasconstantino.github.io/graphiql-online/`
+  * change the endpoint with `http` url
+  * with the help of documentation explorer in the graphql explorer, you can see the types and fields which is to be queried 
+  * use the below sample query for getting the transfer events
+  ```
+     query {
+      transferEntities{
+      id
+      count
+      history {
+         id
+         from
+         to
+         tokenId
+      }
+      }
+   }
+```
