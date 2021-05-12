@@ -38,6 +38,9 @@ cargo run -p graph-node --release --  --postgres-url postgresql://postgres:postg
 ```
 
 > NOTE:
+> ##### infura_project_id
+> for `infura_project_id` you need to have account in `infura.io`, then create a project and choose the network `rinkeby`
+> 
 > This is the syntax for cargo url
 > ```
 > cargo run -p graph-node --release -- \
