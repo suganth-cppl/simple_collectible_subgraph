@@ -11,3 +11,31 @@ type TransferHistoryEntity @entity {
   tokenId: BigInt!
   transfer: TransferEntity!
 }
+
+type ApprovalEntity @entity {
+  id: ID!
+  count: BigInt!
+  history: [ApprovalHistoryEntity!] @derivedFrom(field: "approval")
+}
+
+type ApprovalHistoryEntity @entity {
+  id: ID!
+  owner: Bytes! # address
+  approved: Bytes! # address
+  tokenId: BigInt!
+  approval: ApprovalEntity!
+}
+
+type ApprovalAllEntity @entity {
+  id: ID!
+  count: BigInt!
+  history: [ApprovalAllHistoryEntity!] @derivedFrom(field: "approvalAll")
+}
+
+type ApprovalAllHistoryEntity @entity {
+  id: ID!
+  owner: Bytes! # address
+  operator: Bytes! # address
+  approved: Boolean!
+  approvalAll: ApprovalAllEntity!
+}
